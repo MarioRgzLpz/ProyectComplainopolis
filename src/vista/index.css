@@ -1,0 +1,576 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #add5fa;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.estilo-error {
+    color: #ff6961;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+nav {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0px;
+}
+
+nav a:hover {
+    color: #add5fa;
+}
+
+nav a {
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+    padding-right: 15px;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f7;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    flex-basis: 20%;
+    background-color: white;
+    border-radius: 20px;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+
+aside form {
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+.info-perfil p {
+    padding-left: 20px;
+    margin: 0;
+}
+
+aside .contenedor-perfil {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#foto-perfil-aside {
+    border-radius: 50%;
+    height: 60px; 
+    width: 60px;
+}
+
+#editar-aside img {
+    margin-top: 2px;
+    height: 30px;
+    width: 30px;
+}
+
+#cerrar-sesion-aside {
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    background-image: url('../img/iconos/logout.png');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+.ranking ul{
+    list-style-type: upper-roman;
+}
+
+main {
+    flex-basis: 80%;
+    padding: 20px;
+    background-color: #f5f5f7;
+}
+
+.pie-pagina {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding-bottom: 15px;
+}
+
+#foto-perfil-visualizacion {
+    display: none;
+    height: 150px;
+    width: 150px;
+}
+
+#foto-perfil-visualizacion-2 {
+    display: block;
+    height: 150px;
+    width: 150px;
+}
+
+/* Reglas específicas para registro.php */
+
+.contenedor-formulario-registro {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    padding-bottom: 0px;
+}
+
+#titulo-registro {
+    background-color: #1d1d1f;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 10px;
+    color: white;
+    margin-top: 0;
+    padding-left: 10px;
+}
+
+#formulario-registro {
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.contenedor-inputs-registro {
+    padding: 50px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.contenedor-registro-usuario {
+    max-height: 70px;
+    margin-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 20px;
+    font-weight: bold;
+    flex-basis: 80%;
+    border-radius: 20px;
+    background-color: #77dd77;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    align-items: center;
+}
+
+/* Reglas específicas para gestion_usuarios.php */
+
+.miniatura-usuario {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.datos-usuario {
+    color: #008080;
+}
+
+#contenedor-usuarios {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    padding-bottom: 0px;
+}
+
+.tarjeta-usuario {
+    border-radius: 20px;
+    display: flex;
+    background-color: white;
+    padding: 60px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-gestion-usuarios {
+    color: white;
+    background-color: #1d1d1f;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.menu-gestion-usuarios > ul {
+    list-style: none;
+}
+
+.menu-gestion-usuarios a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-gestion-usuarios img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+.contenedor-datos-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-datos-usuario p {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contenedor-botones-usuario {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-borrado-usuario-1 {
+    flex-basis: 80%;
+    margin: 20px;
+    height: 200px;
+    background-color: #ff6961;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-borrado-usuario-2 {
+    margin-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 20px;
+    font-weight: bold;
+    flex-basis: 70%;
+    border-radius: 20px;
+    background-color: #ff6961;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    align-items: center;
+}
+
+.contenedor-botones-usuario-botones {
+    display: flex;
+}
+
+/* Reglas específicas para nueva_incidencia.php */
+
+.imagen-previsualizacion-incidencia {
+    height: 100px;
+    width: 100px;
+}
+
+.contenedor-formulario-incidencia {
+    flex-basis: 80%;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    min-height: 300px;
+}
+
+#formulario-incidencia {
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.contenedor-inputs-incidencia {
+    padding: 50px
+}
+
+.estado-incidencia {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#titulo-formulario-incidencia {
+    background-color: #1d1d1f;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 10px;
+    color: white;
+    margin-top: 0;
+    padding-left: 10px;
+}
+
+/* Reglas específicas para log.php */
+.contenedor-log {
+    flex-basis: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-log h1 {
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #1d1d1f;
+    color: white;
+}
+
+.contenedor-log table {
+    margin-top: 0px;
+    width: 100%;
+    background-color: #f5f5f7;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-spacing: 0 10px;
+}
+
+.contenedor-log tr > td:first-child {
+    background-color: #d2d2d2;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.contenedor-log tr > td:nth-child(2n) {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.contenedor-log tr > td {
+    padding: 10px;
+    background-color: white;
+}
+
+/* Reglas específicas para mostrar_incidencia */
+
+.contenedor-botones-incidencia img {
+    height: 10px;
+}
+
+.contenedor-botones-incidencia button {
+    border-radius: 5px;
+}
+
+
+/* Reglas especificas para las incidencias */
+
+.select-filtro{
+    width: 20%;
+}
+
+.busqueda-filtro {
+    display:block;
+}
+
+.contenedor-incidencia {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.contenedor-datos-incidencia {
+    padding: 20px;
+}
+
+.contenedor-incidencia ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor-incidencia ul span {
+    color: #008080;
+}
+
+.contenedor-incidencia li img {
+    height: 20px;
+    width: 20px;
+}
+
+.contenedor-incidencia h3 {
+    margin-top: 15px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: white;
+    background-color: #1d1d1f;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.contenedor-foto-incidencia {
+    margin-bottom: 20px;
+}
+
+.contenedor-foto-incidencia img {
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+}
+
+.botones-incidencia-izquierda  {
+    width: 50px;
+    height: 50px;
+    padding-left: 20px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones-incidencia-izquierda a {
+    height: 20px;
+    width: 20px;
+}
+
+.botones-incidencia-derecha {
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones-incidencia-derecha a {
+    margin: 2px;
+    padding: 5px;
+    background-color: #d2d2d2;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.contenedor-botones-incidencia {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-botones-incidencia a img {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+#me-gusta-incidencia {
+    border-radius: 50%;
+    margin: 2px;
+    padding: 5px;
+    background-color: #77dd77;
+}
+
+#no-me-gusta-incidencia {
+    border-radius: 50%;
+    margin: 2px;
+    padding: 5px;
+    background-color:#ff6961;
+}
+
+.primer-filtro {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #1d1d1f;
+    color: white;
+}
+
+.texto-comentario {
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.comentario-usuario {
+    padding: 20px;
+}
+
+.boton-comentario {
+    margin-top: 10px;
+}
+
+.comentario-incidencia {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 0px;
+    background-color: #d2d2d2;
+    margin-bottom: 8px;
+    border-radius: 20px;
+}
+
+.comentario-incidencia .nombre {
+    margin-right: 10px;
+}
+
+.comentario-incidencia .comentario {
+    margin-left: auto;
+}
+
+.formulario-filtro > * {
+    margin: 10px;
+}
+.contenedor-restaurar-bbdd {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.contenedor-restaurar-bbdd-completo h1 {
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    background-color: #1d1d1f;
+    color: white;
+}
+
+.contenedor-inactivo {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+.icono-borrar-comentario {
+    height: 30px;
+    width: 30px;
+}
+
+.boton-borrar-comentario {
+    padding-top: 10px;
+}

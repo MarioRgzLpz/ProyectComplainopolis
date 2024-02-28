@@ -1,0 +1,38 @@
+version: '3'
+services:
+  webserver:
+    build: 
+      context: /home/mariorl/Desktop/DGIIM/ProyectoTW/src
+      dockerfile: Dockerfile
+    container_name: servidor_web
+    volumes:
+      - /home/mariorl/Desktop/DGIIM/ProyectoTW/src:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:latest
+    container_name: base_de_datos
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: complainopolis
+      MYSQL_USER: mario
+      MYSQL_PASSWORD: pep123
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    expose:
+      - 80
+    container_name: datos_phpmyadmin
+    environment:
+      PMA_HOST: mysql
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql

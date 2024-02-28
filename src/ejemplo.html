@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Previsualizar Foto</title>
+    <script>
+        function previsualizarFoto() {
+            var archivo = document.getElementById("fotoInput").files[0];
+            var tipoArchivo = archivo.type;
+
+            // Validar si el archivo es una foto
+            if (!tipoArchivo.startsWith('image/')) {
+                alert("El archivo seleccionado no es una foto válida.");
+                return;
+            }
+
+            // Previsualizar la foto antes de enviarla
+            var lector = new FileReader();
+            lector.onload = function (e) {
+                var fotoPreview = document.getElementById("fotoPreview");
+                fotoPreview.src = e.target.result;
+                fotoPreview.style.display = "block";
+            };
+            lector.readAsDataURL(archivo);
+        }
+
+        function enviarFoto() {
+            var foto = document.getElementById("fotoInput").files[0];
+
+            // Crear FormData para enviar el archivo al servidor
+            var formData = new FormData();
+            formData.append('foto', foto);
+
+            // Enviar la foto al servidor utilizando AJAX nativo
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "procesar_foto.php", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Procesar la respuesta del servidor
+                    console.log(xhr.responseText);
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
+    <style>
+        #fotoPreview {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="fotoInput" accept="image/*" onchange="previsualizarFoto()">
+    <br>
+    <img id="fotoPreview" src="#" alt="Previsualización de la foto">
+    <br>
+    <button onclick="enviarFoto()">Enviar Foto</button>
+</body>
+</html>
+
