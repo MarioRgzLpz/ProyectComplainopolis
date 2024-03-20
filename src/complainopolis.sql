@@ -106,9 +106,6 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`ID_usuario`, `Nombre`, `Apellidos`, `Email`, `Clave`, `Direccion`, `Telefono`, `Rol`, `Estado`, `Foto`) VALUES
-('jbaena', 'Javier', 'Baena', 'jbaena@ugr.es', '$2y$10$rB.hvmBWkA4lSC6m3/KhveeNrCYSOk.j7ruAkHSycMkzhaM/KspwO', 'Universidad de Granada', 666666666, 'Administrador', 'Activo', './img/perfil_admin.png');
-
 -- --------------------------------------------------------
 
 --
